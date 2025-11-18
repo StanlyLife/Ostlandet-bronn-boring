@@ -1,0 +1,104 @@
+.section {
+  padding: clamp(4rem, 6vw, 6rem) 0;
+  background: #fff;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.heading {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3rem;
+}
+
+.heading span {
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.heading h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-dark);
+  margin: 0.5rem 0 1rem;
+}
+
+.heading p {
+  color: var(--color-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonialCard,
+.caseCard {
+  border-radius: 1.25rem;
+  padding: 2rem;
+  background: var(--color-dark);
+  color: #fff;
+  box-shadow: 0 20px 45px rgba(6, 18, 31, 0.25);
+}
+
+.quote {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  margin: 0.2rem 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.caseCard {
+  background: linear-gradient(135deg, #081423, #0f293d);
+  grid-column: span 2;
+}
+
+.caseCard h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.metrics {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.metrics li {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 0.9rem;
+  padding: 0.85rem;
+  text-align: center;
+}
+
+.metrics span {
+  display: block;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.metrics strong {
+  display: block;
+  font-size: 1.3rem;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .caseCard {
+    grid-column: span 1;
+  }
+}

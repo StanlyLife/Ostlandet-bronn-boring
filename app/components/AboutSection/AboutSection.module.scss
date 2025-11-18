@@ -1,0 +1,94 @@
+.section {
+  padding: clamp(4rem, 6vw, 6.5rem) 0;
+  background-color: #fff;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.titleGroup span {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+
+.titleGroup h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.lede {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.copy {
+  color: var(--color-muted);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.benefitCard {
+  padding: 1.25rem;
+  border: 1px solid rgba(12, 27, 42, 0.1);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #fafcff;
+}
+
+.iconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(37, 150, 190, 0.15);
+  display: grid;
+  place-items: center;
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.imageCard {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 420px;
+  box-shadow: 0 30px 60px rgba(12, 27, 42, 0.2);
+}
+
+.experienceBadge {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: rgba(5, 15, 25, 0.85);
+  color: #fff;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.experienceBadge strong {
+  display: block;
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+}

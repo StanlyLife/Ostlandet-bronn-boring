@@ -1,0 +1,124 @@
+.hero {
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  min-height: clamp(520px, 75vh, 780px);
+  padding: clamp(2rem, 4vw, 4rem) 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(6, 18, 31, 0.85),
+    rgba(6, 18, 31, 0.25)
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: min(720px, 90%);
+  margin: 0 clamp(1.5rem, 6vw, 8rem);
+  padding: clamp(1.75rem, 3vw, 3rem);
+  background: rgba(5, 15, 25, 0.8);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.28em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+  line-height: 1.1;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.highlight {
+  color: var(--color-primary);
+  display: inline;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.body {
+  margin-top: 1.25rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.ctaRow {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cta {
+  padding: 0.85rem 1.9rem;
+  border-radius: 999px;
+  background: linear-gradient(120deg, #2596be, #4fd1c5);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 30px rgba(37, 150, 190, 0.35);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(37, 150, 190, 0.4);
+}
+
+.subCta {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.subCta a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .content {
+    margin: 0 auto;
+  }
+
+  .ctaRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
